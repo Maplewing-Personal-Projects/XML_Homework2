@@ -30,15 +30,18 @@
         function avoid($value){
           $value = str_replace("<", "&lt;", $value);
           $value = str_replace(">", "&gt;", $value);
+          $value = nl2br($value);
           return $value;
         }
-      
+        echo "<table border = '1' class = 'bbs'>";
+        echo "<tr><th style = 'width: 15%'>姓名</th><th style = 'width: 50%'>留言內容</th><th style = 'width: 20%'>日期</th><th>操作</th></tr>";
         $doc = new DOMDocument();
         if( $doc->load('data/bbs.xml') ){
           $messages = $doc->getElementsByTagName('message');
           $count = 0;
+          
           foreach( $messages as $message ){
-            echo "<table border = '1' class = 'bbs'>";
+            
             $name = $message->getElementsByTagName("name")->item(0);
             $mail = $message->getElementsByTagName("mail")->item(0);
             $content = $message->getElementsByTagName("content")->item(0);
@@ -49,15 +52,15 @@
             $content = avoid($content->nodeValue);
             $time = avoid($time->nodeValue);
             
-            echo "<tr><th>姓名</th><td>" . $name . "</td></tr>";
-            echo "<tr><th>信箱</th><td>" . $mail . "</td></tr>";
-            echo "<tr><th>留言內容</th><td>" . $content . "</td></tr>";
-            echo "<tr><th>日期</th><td>" . date(DATE_RFC822, $time) . "</td></tr>";
-            echo "<tr><td colspan = '2'><a href = 'write.php?mode=edit&a=" . $count . "'>編輯</a>/<a href = 'delete.php?a=" . $count . "'>刪除</a></td></tr>";
-            echo "</table>";
+            echo "<tr><td><a href = 'mailto:". $mail. "'>" . $name . "</td>";
+            echo "<td>" . $content . "</td>";
+            echo "<td>" . date(DATE_RFC822, $time) . "</td>";
+            echo "<td><a href = 'write.php?mode=edit&a=" . $count . "'>編輯</a><br/><a href = 'delete.php?a=" . $count . "'>刪除</a></td></tr>";
+            
             $count++;
           }
         }
+        echo "</table>";
       ?>
     </section>
     <footer>Powered by Lanyi (資工系103級 曹又霖)

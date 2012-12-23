@@ -158,9 +158,16 @@ a.linkoutside:hover{
 
 .bbs{
   margin: 10px auto;
-  width: 500px;
+  width: 700px;
+  text-align: center;
 }
 
-.bbs th{
-  width: 20%;
+a{
+  color: #33b;
+  text-decoration: none;
+}
+
+a:hover{
+  color: #953;
+  text-decoration: none;
 }
