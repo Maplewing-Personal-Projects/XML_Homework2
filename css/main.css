@@ -1,0 +1,166 @@
+body{
+  padding: 0px;
+  margin: 0px;
+  font-family: "微軟正黑體", "新細明體";
+  line-height: 25px;
+  font-size: 17px;
+  text-align: center;
+  background: url( "../images/body.jpg" ) repeat-x center center fixed;
+}
+
+header{
+  width: 100%;
+  height: 200px;
+  background: url( "../images/header.png" ) repeat-x;
+  text-align: center;
+}
+
+nav{
+  width: 100%;
+  height: 30px;
+  background: #b22;
+}
+
+nav ul{
+  list-style-type: none;
+  margin: 0px auto;
+  padding: 0px;
+  width: 700px;
+}
+
+nav ul li{
+  float: left;
+  margin: 0 auto;
+}
+
+nav ul li a{
+  display: block;
+  width: 350px;
+  height: 30px;
+  text-decoration: none;
+  color: white;
+}
+
+nav ul li a:hover{
+  background: white;
+  color: black;
+}
+
+#content{
+  width: 750px;
+  min-height: 500px;
+  height: auto !important;
+  height: 500px;
+  margin: 0 auto;
+  position: relative;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  background: #ddd;
+  text-align: left;
+  background: url( "../images/white70.png" ) repeat;
+}
+
+#content div#sonic{
+  position: absolute;
+  top: -160px;
+  left: -396px;
+  width: 396px;
+  height: 688px;
+  background: url( "../images/sonic.png" ) no-repeat;
+}
+
+#content div#metal_sonic{
+  position: absolute;
+  top: -160px;
+  left: 700px;
+  width: 455px;
+  height: 688px;
+  overflow: hidden;
+  background: url( "../images/metalsonic.png" ) no-repeat;
+}
+  
+@media all and (min-width: 800px) {
+  body{
+    overflow-x: hidden;
+  }
+}
+@media all and (max-width: 800px) {
+  body{
+    overflow-x: hidden;
+  }
+  
+  header img{
+    width: 100%;
+  }
+  
+  #content div#sonic{
+    display: none;
+  }
+  
+  #content div#metal_sonic{
+    display: none;
+  }
+  
+  nav ul{
+    width: 100%;
+  }
+  nav ul li{
+    width: 25%;
+  }
+  nav ul li a{
+    width: 100%;
+  }
+  #content{
+    margin: 0;
+    width: 100%;
+  }
+  
+}
+
+#content h1{
+  margin: 0px;
+  padding-top: 30px;
+  padding-left: 60px;
+  font-size: 30px;
+  background: url( "../images/icon.png" ) no-repeat;
+}
+
+#content p{
+  padding-left: 40px;
+  padding-right: 40px;
+  text-indent: 36px;
+}
+
+#content table tr td p{
+  text-align: left;
+  padding-left: 10px;
+  padding-right: 10px;  
+  text-indent: 36px;
+}
+
+footer{
+  background: #333;
+  width: 100%;
+  font-size: 12px;
+  color: white;
+  line-height: 15px;
+}
+
+a.linkoutside{
+  color: #33b;
+  text-decoration: none;
+}
+
+a.linkoutside:hover{
+  color: #953;
+  text-decoration: none;
+}
+
+.bbs{
+  margin: 10px auto;
+  width: 500px;
+}
+
+.bbs th{
+  width: 20%;
+}
