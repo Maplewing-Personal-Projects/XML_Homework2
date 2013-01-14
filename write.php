@@ -56,7 +56,7 @@
     </section>
     <footer>Powered by Lanyi (資工系103級 曹又霖)
     <br />Pictures are from Sonic Channel, Sonic Wikia, Sonic Hub and Wiki.
-    <br />This HTML5 Website is Lanyi&#39;s XML Homework 2.
+    <br />This HTML5 Website is Lanyi&#39;s XML Homework 3.
     <br />
     <span style="color: yellow">!!DO NOT USE IE TO OPEN THIS HTML5 WEBSITE!!</span></footer>
   </body>

@@ -55,7 +55,8 @@
             echo "<tr><td><a href = 'mailto:". $mail. "'>" . $name . "</td>";
             echo "<td>" . $content . "</td>";
             echo "<td>" . date(DATE_RFC822, $time) . "</td>";
-            echo "<td><a href = 'write.php?mode=edit&a=" . $count . "'>編輯</a><br/><a href = 'delete.php?a=" . $count . "'>刪除</a></td></tr>";
+            echo "<td><a href = 'write.php?mode=edit&a=" . $count . "'>編輯</a><br/><a href = 'delete.php?a=" . $count . "'>刪除</a>";
+            echo "<br/><a href = 'write.php?mode=reply&a=" . $count . "'>回應</a></td></tr>";
             
             $count++;
           }
@@ -65,7 +66,7 @@
     </section>
     <footer>Powered by Lanyi (資工系103級 曹又霖)
     <br />Pictures are from Sonic Channel, Sonic Wikia, Sonic Hub and Wiki.
-    <br />This HTML5 Website is Lanyi&#39;s XML Homework 2.
+    <br />This HTML5 Website is Lanyi&#39;s XML Homework 3.
     <br />
     <span style="color: yellow">!!DO NOT USE IE TO OPEN THIS HTML5 WEBSITE!!</span></footer>
   </body>
